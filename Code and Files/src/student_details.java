@@ -256,7 +256,7 @@ public class student_details extends javax.swing.JFrame {
         //</editor-fold>
 
         
-        java.awt.EventQueue.invokeLater(new Runnable() {
+\        java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new student_details().setVisible(true);
             }
