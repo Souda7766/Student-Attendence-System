@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="studentsystem.controllers.StudentController"
+            prefWidth="600" prefHeight="420">
+
+    <children>
+        <Label layoutX="20" layoutY="20" text="Student Management" style="-fx-font-size: 20px;"/>
+
+        <Label layoutX="20" layoutY="60" text="Name:"/>
+        <TextField fx:id="nameField" layoutX="80" layoutY="55" prefWidth="200"/>
+
+        <Label layoutX="300" layoutY="60" text="Roll No:"/>
+        <TextField fx:id="rollField" layoutX="370" layoutY="55" prefWidth="200"/>
+
+        <Label layoutX="20" layoutY="100" text="Class:"/>
+        <TextField fx:id="classField" layoutX="80" layoutY="95" prefWidth="200"/>
+
+        <Button text="Add Student" layoutX="480" layoutY="95" onAction="#handleAddStudent"/>
+
+        <TableView fx:id="studentTable" layoutX="20" layoutY="140" prefWidth="560" prefHeight="230">
+            <columns>
+                <TableColumn fx:id="idColumn" text="ID" prefWidth="50"/>
+                <TableColumn fx:id="nameColumn" text="Name" prefWidth="150"/>
+                <TableColumn fx:id="rollColumn" text="Roll No" prefWidth="150"/>
+                <TableColumn fx:id="classNameColumn" text="Class" prefWidth="150"/>
+            </columns>
+        </TableView>
+
+        <Button text="Delete Selected" layoutX="20" layoutY="380" onAction="#handleDeleteStudent"/>
+    </children>
+</AnchorPane>
